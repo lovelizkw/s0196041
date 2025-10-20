@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор стоимости заказа</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="calculator.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Калькулятор стоимости заказа</h1>
+        
+        <div class="form-group">
+            <label for="product">Выберите товар из списка:</label>
+            <select id="product" name="product">
+                <option value="1000">Футболка - 1000 руб.</option>
+                <option value="3000">Джинсы - 3000 руб.</option>
+                <option value="2000">Платье - 2000 руб.</option>
+                <option value="1500">Шорты - 1500 руб.</option>
+                <option value="2500">Свитер - 2500 руб.</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="quantity">Количество товара:</label>
+            <input id="quantity" name="quantity" type="text" placeholder="Введите количество">
+            <div class="error" id="error-msg">Только целые положительные числа</div>
+        </div>
+        
+        <button id="calculate-btn">Рассчитать стоимость</button>
+        
+        <div class="result" id="result">
+            <h3>Результат подсчёта:</h3>
+            <p id="result-text"></p>
+        </div>
+    </div>
+    
+    <footer>
+        © Комиссаренко Елизавета
+    </footer>
+</body>
+</html>
