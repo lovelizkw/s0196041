@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="calculator.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Калькулятор стоимости сладостей</h1>
+        
+        <form id="calculator-form">
+            <div class="form-group">
+                <label for="quantity">Количество:</label>
+                <input id="quantity" name="quantity" type="text" value="1" placeholder="Введите количество">
+                <div class="error-message" id="quantity-error">Пожалуйста, введите целое положительное число</div>
+            </div>
+            
+            <div class="form-group">
+                <label>Тип сладостей:</label>
+                <div class="radio-group">
+                    <label class="radio-label">
+                        <input type="radio" name="sweetType" value="1" checked>
+                        Шоколадные конфеты (100 руб.)
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="sweetType" value="2">
+                        Пирожные (200 руб.)
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="sweetType" value="3">
+                        Печенье (50 руб.)
+                    </label>
+                </div>
+            </div>
+            
+            <div class="form-group" id="options-group">
+                <label for="options">Опции упаковки:</label>
+                <select id="options" name="options">
+                    <option value="0">Стандартная упаковка</option>
+                    <option value="50">Подарочная упаковка (+50 руб.)</option>
+                    <option value="100">Премиум упаковка (+100 руб.)</option>
+                </select>
+            </div>
+            
+            <div class="form-group" id="property-group">
+                <label class="checkbox-label">
+                    <input type="checkbox" id="property" name="property">
+                    Доставка в тот же день (+200 руб.)
+                </label>
+            </div>
+            
+            <div class="result" id="result">
+                <h3>Стоимость заказа:</h3>
+                <p id="result-text">100 руб.</p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
